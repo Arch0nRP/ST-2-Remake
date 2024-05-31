@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-- Link to the CSS file for styling -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- Login form -->
         <h1>Login</h1>
-        <!-- Form for username and password input -->
         <form id="loginForm">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <button type="submit">Submit</button>
+            <p id="error-message" class="error-message"></p>
         </form>
     </div>
-    <!-- Link to the JavaScript file for handling login logic -->
     <script src="scripts.js"></script>
 </body>
 </html>
