@@ -1,3 +1,18 @@
+// Disable right-click context menu
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+
+// Disable certain key combinations to prevent opening developer tools
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'i' || event.key === 'j' || event.key === 'c')) {
+        event.preventDefault();
+    }
+    if (event.key === 'F12') {
+        event.preventDefault();
+    }
+});
+
 // Event listener for the login form submission
 document.getElementById('loginForm')?.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting the traditional way
@@ -7,10 +22,10 @@ document.getElementById('loginForm')?.addEventListener('submit', function(event)
     const password = document.getElementById('password').value;
 
     // Check if the entered username and password match the expected values
-    if (username === 'natheesh' && password === 'Qwert-yuiop@09876543210') {
+    if (username === '😊' && password === '😊') {
         window.location.href = 'webpage2.html'; // Redirect to the videos page
     } else {
-        alert("Incorrect username or password. Hint: As if I'll hint the Password.");
+        alert('Incorrect username or password. Hint: Both are smileys.');
     }
 });
 
@@ -53,4 +68,3 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 });
-a
