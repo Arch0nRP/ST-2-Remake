@@ -22,8 +22,12 @@ button:hover {
     background-color: gray;
 }
 
-.error-message {
+.error-message, .message {
     color: red;
     display: none;
     margin-top: 10px;
+}
+
+a {
+    color: white;
 }
