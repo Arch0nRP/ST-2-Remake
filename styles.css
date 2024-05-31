@@ -1,0 +1,27 @@
+/* Basic styling for the body */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Centered container for content */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Styling for buttons */
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: gray;
+}
