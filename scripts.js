@@ -20,12 +20,15 @@ document.getElementById('loginForm')?.addEventListener('submit', function(event)
     // Retrieve the values of the username and password fields
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
 
     // Check if the entered username and password match the expected values
-    if (username === 'hello' && password === 'hola') {
+    if (username === '😊' && password === '😊') {
         window.location.href = 'webpage2.html'; // Redirect to the videos page
     } else {
-        alert('Incorrect username or password. Hint: Both are smileys.');
+        // Display error message
+        errorMessage.innerText = 'Incorrect username or password. Hint: Both are smileys.';
+        errorMessage.style.display = 'block';
     }
 });
 
