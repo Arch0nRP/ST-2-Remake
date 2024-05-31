@@ -1,14 +1,17 @@
+/* Set background color and text color for the whole page */
 body {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
 }
 
+/* Center the content and add margin to the top */
 .container {
     text-align: center;
     margin-top: 50px;
 }
 
+/* Style the buttons */
 button {
     background-color: white;
     color: black;
@@ -18,16 +21,19 @@ button {
     cursor: pointer;
 }
 
+/* Add hover effect to buttons */
 button:hover {
     background-color: gray;
 }
 
+/* Style for error messages and general messages */
 .error-message, .message {
     color: red;
     display: none;
     margin-top: 10px;
 }
 
+/* Style links */
 a {
     color: white;
 }
