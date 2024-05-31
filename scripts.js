@@ -22,7 +22,7 @@ document.getElementById('loginForm')?.addEventListener('submit', function(event)
     const password = document.getElementById('password').value;
 
     // Check if the entered username and password match the expected values
-    if (username === '😊' && password === '😊') {
+    if (username === 'hello' && password === 'hola') {
         window.location.href = 'webpage2.html'; // Redirect to the videos page
     } else {
         alert('Incorrect username or password. Hint: Both are smileys.');
