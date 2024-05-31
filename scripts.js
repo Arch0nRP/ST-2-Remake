@@ -1,4 +1,4 @@
-// Disable right-click context menu
+// Disable right-click context menu to prevent inspecting elements
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
@@ -26,7 +26,7 @@ function handleLogin(event) {
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
 
-    // Simple client-side validation for demonstration purposes
+    // Validate credentials
     if (username === storedUsername && password === storedPassword) {
         window.location.href = 'webpage2.html'; // Redirect to the videos page
     } else {
@@ -85,16 +85,20 @@ function loadVideos() {
             })
             .then(videos => {
                 videos.forEach(video => {
+                    // Create a div element for each video
                     const videoElement = document.createElement('div');
+                    // Create and append title
                     const title = document.createElement('h2');
                     title.innerText = video.title;
                     videoElement.appendChild(title);
 
+                    // Create and append video element
                     const videoTag = document.createElement('video');
                     videoTag.width = 320;
                     videoTag.height = 240;
                     videoTag.controls = true;
 
+                    // Create and append source element
                     const sourceTag = document.createElement('source');
                     sourceTag.src = `videos/${video.source}`;
                     sourceTag.type = 'video/mp4';
@@ -102,6 +106,7 @@ function loadVideos() {
                     videoTag.appendChild(sourceTag);
                     videoElement.appendChild(videoTag);
 
+                    // Append videoElement to the videoContainer
                     videoContainer.appendChild(videoElement);
                 });
             })
